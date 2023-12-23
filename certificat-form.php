@@ -4,7 +4,7 @@
 session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
-if (strlen($_SESSION['obcsuid']== 0)) {
+if (strlen($_SESSION['obcsuid'] > 0)) {
   header('location:logout.php');
   } else{
 

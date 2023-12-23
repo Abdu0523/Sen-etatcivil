@@ -50,7 +50,7 @@
                 <ul>
                   <li class="dropdown"><a href="#"><span class="bi bi-person">Personnels de l'EC</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                      <li><a href="http://localhost/projet/senetatcivil/office" target="_blank">Offier</a></li>
+                      <li><a href="http://localhost/projet/senetatcivil/office" target="_blank">Officier</a></li>
                       <li><a href="http://localhost/projet/senetatcivil/agent" target="_blank">Agent</a></li>
                     </ul>
                   </li>
