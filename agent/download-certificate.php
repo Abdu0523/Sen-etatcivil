@@ -1,8 +1,8 @@
 <?php
 namespace Dompdf;
-require_once '../admin/dompdf/autoload.inc.php';
+require_once 'dompdf/autoload.inc.php';
 ob_start();
-$con=mysqli_connect("localhost", "root", "", "obcsdb");
+$con=mysqli_connect("localhost", "root", "", "etat-civil");
 if(mysqli_connect_errno()){
 echo "Connection Fail".mysqli_connect_error();
 }
@@ -30,13 +30,13 @@ while ($row=mysqli_fetch_array($ret)) { ?>
 <h3>Application / Certificate Number: <?php  echo $row['ApplicationID'];?></h3>
 <table  align="center" border="1" width="100%">
 
-<tr>
+  <tr>
     <th width="150">Full Name</th>
     <td width="250"><?php  echo $row['FullName'];?></td>
     <th width="150">Gender</th>
     <td><?php  echo $row['Gender'];?></td>
   </tr>
-   <tr>
+  <tr>
     <th scope>Date of Birth</th>
     <td><?php  echo $row['DateofBirth'];?></td>
     <th scope>Place of Birth</th>
@@ -95,7 +95,7 @@ $dompdf = new DOMPDF();
 $dompdf->setPaper('A4', 'landscape');
 $dompdf->load_html($html);
 $dompdf->render();
-//For view
+//for view
 //$dompdf->stream("",array("Attachment" => false));
 // for download
 $dompdf->stream("Birth-Certificate.pdf");

@@ -107,11 +107,12 @@ if (strlen($_SESSION['obcsuid']==0)) {
                                                 <option value="selected">S&eacute;lectionn&eacute;s</option>
                                             </select>
                                         </div>
-                                        <table id="table" data-toggle="table"  data-search="true"  data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId"  data-click-to-select="true" data-toolbar="#toolbar">
+                                        
+                                        <table id="table" data-toggle="table"  data-search="true"  data-key-events="true" data-show-toggle="true" data-cookie="true" data-cookie-id-table="saveId"  data-click-to-select="true" data-toolbar="#toolbar">
+                                            <!-- data-resizable="true" -->
                                             <thead>
                                             <tr>
                                                     <th data-field="state" data-checkbox="true"></th>
-                                                    
                                                     <th>No. de registre</th>
                                                     <th>Nom</th>
                                                     <th >Date de naissance</th>
@@ -123,8 +124,8 @@ if (strlen($_SESSION['obcsuid']==0)) {
                                             <tbody>
                                                
                                              
-                                              <?php
-                                            $uid= $_SESSION['obcsuid'];
+<?php
+$uid= $_SESSION['obcsuid'];
 $sql="SELECT * from tblcertificat where  Status='Approuvé'";
 
 $query = $dbh -> prepare($sql);

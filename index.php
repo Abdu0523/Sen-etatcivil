@@ -124,7 +124,7 @@
 
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div class="copyright">
-            &copy; <?php echo date('Y'); ?> | <strong><span><a href="index.php">SEN&Eacute;TATCIVIL </a> </span></strong> - Tous droits réservés 
+            &copy; <?php echo date('Y'); ?> | <strong><span><a href="index.php">SEN&Eacute;TATCIVIL </a> </span></strong>  
              
           </div>
           <div class="credits">
