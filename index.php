@@ -96,7 +96,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-folder-check icon"></i></div>
-              <h4><a href="" class="stretched-link">Suivie de votre demande</a></h4>
+              <h4><a href="suivi-certificat.php" class="stretched-link">Suivie de votre demande</a></h4>
               <p>"Restez informé à chaque étape. Suivez facilement l'évolution de votre requete en ligne."</p>
             </div>
           </div><!-- End Service Item -->

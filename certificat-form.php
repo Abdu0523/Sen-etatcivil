@@ -138,7 +138,7 @@ if (isset($_POST['submit'])) {
         <div class="d-flex justify-content-between align-items-center">
           <h2>Formulaire de Déclaration</h2>
           <ol>
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.php">Accueil</a></li>
             <li>Form. de Déclaration</li>
           </ol>
         </div>
