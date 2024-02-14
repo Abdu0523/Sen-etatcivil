@@ -4,9 +4,8 @@
 session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
-if (strlen($_SESSION['obcsuid']==1)) {
-  header('location:logout.php');
-  } else{
+{
+
 ?>
 
   
@@ -80,7 +79,7 @@ if (strlen($_SESSION['obcsuid']==1)) {
     </div><!-- End Breadcrumbs -->
 
     <!-- ======= Block Section ======= -->
-    <section class="inner-page">
+    <section style="padding-top: 150px" class="inner-page">
        
       <div class="container">
 
