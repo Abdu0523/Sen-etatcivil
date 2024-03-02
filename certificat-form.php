@@ -14,6 +14,7 @@ if (isset($_POST['submit'])) {
     $gender = $_POST['gender'];
     $fname = $_POST['fname'];
     $pob = $_POST['pob'];
+    $cda = $_POST['cda'];
     $nameofmother = $_POST['nameofmother'];
     $nameoffather = $_POST['nameoffather'];
     $padd = $_POST['padd'];
@@ -31,6 +32,7 @@ if (isset($_POST['submit'])) {
     //     'gender' => $gender,
     //     'fname' => $fname,
     //     'pob' => $pob,
+    //     'cda' => $cda,
     //     'nameofmother' => $nameofmother,
     //     'nameoffather' => $nameoffather,
     //     'padd' => $padd,
@@ -44,7 +46,7 @@ if (isset($_POST['submit'])) {
     // exit();
 
     // Requête SQL pour l'insertion
-    $sql = "INSERT INTO tblcertificat (ApplicationID, DateofBirth, Gender, FullName, PlaceofBirth, NameOfMother, NameofFather, CniMother, CniFather, MobileNumber, ParentAddress) VALUES (:appnumber, :dob, :gender, :fname, :pob, :nameofmother, :nameoffather, :padd, :postaladd, :mobnumber, :address)";
+    $sql = "INSERT INTO tblcertificat (ApplicationID, DateofBirth, Gender, FullName, PlaceofBirth, Cda, NameOfMother, NameofFather, CniMother, CniFather, MobileNumber, ParentAddress) VALUES (:appnumber, :dob, :gender, :fname, :pob, :cda, :nameofmother, :nameoffather, :padd, :postaladd, :mobnumber, :address)";
 
     // Préparation de la requête
     $query = $dbh->prepare($sql);
@@ -55,6 +57,7 @@ if (isset($_POST['submit'])) {
     $query->bindParam(':gender', $gender, PDO::PARAM_STR);
     $query->bindParam(':fname', $fname, PDO::PARAM_STR);
     $query->bindParam(':pob', $pob, PDO::PARAM_STR);
+    $query->bindParam(':cda', $cda, PDO::PARAM_STR);
     $query->bindParam(':nameofmother', $nameofmother, PDO::PARAM_STR);
     $query->bindParam(':nameoffather', $nameoffather, PDO::PARAM_STR);
     $query->bindParam(':padd', $padd, PDO::PARAM_STR);
@@ -217,6 +220,16 @@ if (isset($_POST['submit'])) {
                                                       </div>
                                                   </div>
                                                   <br>
+                                                  <div class="form-group-inner">
+                                                      <div class="row">
+                                                          <div class="col-lg-3">
+                                                              <label class="login2 pull-right pull-right-pro">certificat D'acouchement</label>
+                                                          </div>
+                                                          <div class="col-lg-9">
+                                                              <input type="media" class="form-control" required="true" value="" name="cda" />
+                                                          </div>
+                                                      </div>
+                                                  </div>
                                                       <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
