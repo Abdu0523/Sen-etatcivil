@@ -226,10 +226,11 @@ if (isset($_POST['submit'])) {
                                                               <label class="login2 pull-right pull-right-pro">certificat D'acouchement</label>
                                                           </div>
                                                           <div class="col-lg-9">
-                                                              <input type="media" class="form-control" required="true" value="" name="cda" />
+                                                              <input type="file" class="form-control" required="true" value="" name="cda" accept="image/png, image/jpeg,image/svg, .pdf" />
                                                           </div>
                                                       </div>
                                                   </div>
+                                                  <br>
                                                       <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
