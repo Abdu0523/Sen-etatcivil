@@ -14,6 +14,7 @@ $dob=$_POST['dob'];
 $gender=$_POST['gender'];
 $fname=$_POST['fname'];
 $pob=$_POST['pob'];
+$cda=$_POST['cda'];
 $mname=$_POST['nameofmother'];
 $fathername=$_POST['nameoffather'];
 $padd=$_POST['padd'];
@@ -32,7 +33,7 @@ $query-> execute();
 {
 
 
-$sql="insert into tblcertificat(UserID,ApplicationID,DateofBirth,Gender,FullName,PlaceofBirth,NameOfMother,NameofFather,CniMother,CniFather,MobileNumber,ParentAddress)values(:uid,:appnumber,:dob,:gender,:fname,:pob,:mname,:fathername,:padd,:postaladd,:mobnumber,:email)";
+$sql="insert into tblcertificat(UserID,ApplicationID,DateofBirth,Gender,FullName,PlaceofBirth,Cda,NameOfMother,NameofFather,CniMother,CniFather,MobileNumber,ParentAddress)values(:uid,:appnumber,:dob,:gender,:fname,:pob,:cda,:mname,:fathername,:padd,:postaladd,:mobnumber,:email)";
 $query=$dbh->prepare($sql);
 $query->bindParam(':uid',$uid,PDO::PARAM_STR);
 $query->bindParam(':appnumber',$appnumber,PDO::PARAM_STR);
@@ -40,6 +41,7 @@ $query->bindParam(':dob',$dob,PDO::PARAM_STR);
 $query->bindParam(':gender',$gender,PDO::PARAM_STR);
 $query->bindParam(':fname',$fname,PDO::PARAM_STR);
 $query->bindParam(':pob',$pob,PDO::PARAM_STR);
+$query->bindParam(':cda',$cda,PDO::PARAM_STR);
 $query->bindParam(':mname',$mname,PDO::PARAM_STR);
 $query->bindParam(':fathername',$fathername,PDO::PARAM_STR);
 $query->bindParam(':padd',$padd,PDO::PARAM_STR);
@@ -204,6 +206,17 @@ echo "<script>alert('La date de naissance et le nom du père existent déjà. Ve
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="form-group-inner">
+                                                      <div class="row">
+                                                          <div class="col-lg-3">
+                                                              <label class="login2 pull-right pull-right-pro">certificat D'acouchement</label>
+                                                          </div>
+                                                          <div class="col-lg-9">
+                                                              <input type="file" class="form-control" required="true" value="" name="cda" accept="image/png, image/jpeg,image/svg, .pdf" />
+                                                          </div>
+                                                      </div>
+                                                  </div>
+
                                                             <div class="form-group-inner">
                                                             <div class="row">
                                                                 <div class="col-lg-3">
