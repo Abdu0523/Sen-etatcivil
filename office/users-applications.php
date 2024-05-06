@@ -153,18 +153,19 @@ foreach($results as $row)
                     <?php }else { ?>
                       <?php if($row->Status=="Approuvé"){ ?>
 
-                     <td class="bg-success"><?php echo htmlentities($row->Status); ?></td>
+                     <td class="bg-warning"><?php echo htmlentities($row->Status); ?></td>
 
                   <?php } else { ?>
                      <td class="bg-danger"><?php  echo htmlentities($row->Status);?></td>
-                  <?php } ?>
-                                                    <td class="datatable-ct">
-                                                    <a href="view-application-detail.php?viewid=<?php echo htmlentities ($row->ID);?>" class="btn btn-primary">D&eacute;tailles</a>
-                                                    </td>
+                  <?php }} ?>
+                  <td class="datatable-ct">
+                    <a href="view-application-detail.php?viewid=<?php echo htmlentities ($row->ID);?>" class="btn btn-primary">D&eacute;tails</a>
+                  </td>
+                  <?php $cnt=$cnt+1;}} ?>
                                                 </tr>
-                                             <?php $cnt=$cnt+1;}}} ?>  
+                                               
                                             
-                                            </tbody>
+                                              </tbody>
                                         </table>
                                     </div>
                                 </div>

@@ -174,7 +174,6 @@ if (isset($_POST['submit'])) {
                                                               <label class="login2 pull-right pull-right-pro">Date de naissance</label>
                                                           </div>
                                                           <div class="col-lg-2">
-
                                                             <?php // Calcul de la date minimale (4 mois avant aujourd'hui)
                                                                     $minDate = date('Y-m-d', strtotime('-4 months'));
                                                                 ?>
@@ -201,7 +200,7 @@ if (isset($_POST['submit'])) {
                                                   <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
-                                                              <label class="login2 pull-right pull-right-pro">Nom complet</label>
+                                                              <label class="login2 pull-right pull-right-pro">Prenom et Nom </label>
                                                           </div>
                                                           <div class="col-lg-9">
                                                               <input type="text" class="form-control" name="fname" value="" required="true" />
@@ -234,7 +233,7 @@ if (isset($_POST['submit'])) {
                                                       <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
-                                                              <label class="login2 pull-right pull-right-pro">Nom complet de la Mère</label>
+                                                              <label class="login2 pull-right pull-right-pro">Prenom et Nom de la Mère</label>
                                                           </div>
                                                           <div class="col-lg-9">
                                                               <input type="text" class="form-control" required="true" value="" name="nameofmother" />
@@ -248,7 +247,7 @@ if (isset($_POST['submit'])) {
                                                   <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
-                                                              <label class="login2 pull-right pull-right-pro">Nom complet du père</label>
+                                                              <label class="login2 pull-right pull-right-pro">Prenom et Nom du père</label>
                                                           </div>
                                                           <div class="col-lg-9">
                                                               <input type="text" class="form-control" required="true" value="" name="nameoffather" />
@@ -330,7 +329,9 @@ if (isset($_POST['submit'])) {
        
 
       </div>
-</div><!-- End Inner Page -->
+</div>
+
+<!-- End Inner Page -->
 
   </main><!-- End #main -->
 
