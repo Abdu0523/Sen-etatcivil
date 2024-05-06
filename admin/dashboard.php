@@ -124,7 +124,7 @@ $allpps=$query->rowCount();
                                 
                                     </div>
                                     <div class="income-range order-cl">
-                                        <strong style="color:white">D&eacute;tailes</strong>
+                                        <strong style="color:white">D&eacute;tails</strong>
                                     </div>
                                     <div class="clear"></div>
                                 </div>
@@ -159,7 +159,7 @@ $totalusers=$query->rowCount();
                                     </div>
                                     <div class="income-range">
                                        
-                                        <strong style="color:white">D&eacute;tailes</strong>
+                                        <strong style="color:white">D&eacute;tails</strong>
                                     </div>
                                     <div class="clear"></div>
                                 </div>
@@ -194,7 +194,7 @@ $totalusers=$query->rowCount();
                                     </div>
                                     <div class="income-range">
                                        
-                                        <strong style="color:white">D&eacute;tailes</strong>
+                                        <strong style="color:white">D&eacute;tails</strong>
                                     </div>
                                     <div class="clear"></div>
                                 </div>

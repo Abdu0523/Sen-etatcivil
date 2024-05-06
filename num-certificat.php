@@ -5,7 +5,7 @@ session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
 if (strlen($_SESSION['obcsuid']==1)) {
-  header('location:logout.php');
+  header('location:certificat-form.php');
   } else{
 ?>
 
@@ -69,7 +69,7 @@ if (strlen($_SESSION['obcsuid']==1)) {
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Declaration enregistrée</h2>
+          <h2>Déclaration enregistrée</h2>
           
         </div>
 
@@ -80,26 +80,28 @@ if (strlen($_SESSION['obcsuid']==1)) {
     <section class="inner-page">
       <div class="container" data-aos="fade-left">
 
-     <h1 class="text-primary">Felicitation votre requete a bien ete enregistrée</h1>
+     <h1 class="text-primary">Félicitation votre requete a bien ete enregistrée</h1>
       </div>  
       <div class="container" data-aos="fade-right">
-        
-        <p style="font-size:18px; color:green;">Votre demande de soutien pour le projet : <?php echo $ApplicationID ?> est prise en compte.</ <div class="row">
-             
-</div>
-    </section><!-- End Inner Page -->
-
-    <!-- ======= Block  ======= -->
-    <div class="container" data-aos="fade-up">
-
-<p style="color:green;">Vous pouvez maintenant consulter la déclaration de votre demande ci dessus.</p>
-<div class="row ">
+        <p style="font-size:18px; color:green;">
+        Votre numero temporaire est :<span class="font-monospace text-black fw-bold fs-2">"12340<?php echo $ApplicationID ?>" </span>
+      </p>
+    </div>
     <div class="col-md-6 col-sm-12 mx-auto text-center">
-        <p style="font-size:18px;">Votre demande de soutien est maintenant disponible pour les agents compétents.</p>
-        
-</div>
+      <button class="btn btn-info text-light" type="submit" value="<?php echo $ApplicationID ?>">Mon etat de traitement</button>
+    </div>
+    </section><!-- End Inner Page -->
+    <div class="container" >
+      <div class="row ">
+      <div class="col-md-6 col-sm-12 mx-auto text-center">
+        <p style="font-size:18px;">
+          Vous pouvez maintenant consulter l'etat de votre demande ci dessus. Votre demande de soutien est maintenant disponible pour les agents compétents.
+        </p>
+    </div>
+    <!-- ======= Block  ======= -->
+   
     <section class="inner-page">
-      
+   
     </section>
   </main><!-- End #main -->
 

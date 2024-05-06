@@ -94,7 +94,7 @@ echo "<script>alert('Invalid Details');</script>";
                                             <div class="logo">
                                                 <a class="col-log-1"><img src="img/logo.png" alt="logo"/></a>
                                                 <hr>
-                                                <h3 style="font-weight: bold;color: #2596be">AGENT D'&Eacute;TATCIVIL</h3>
+                                                <h3 style="font-weight: bold;color: #2596be">AGENT D'&Eacute;TAT CIVIL</h3>
                                             </div>
                                             <hr>
                                         </div>

@@ -121,7 +121,7 @@ $totalnewapp=$query->rowCount();
                                       </div>
                                       <div class="income-range">
 
-                                        <strong style="color:white">D&eacute;tailles</strong>
+                                        <strong style="color:white">D&eacute;tails</strong>
                                       </div>
                                       <div class="clear"></div>
                                   </div>
@@ -158,7 +158,7 @@ $totalverapp=$query->rowCount();
 
                                       </div>
                                       <div class="income-range order-cl">
-                                          <strong style="color:white">D&eacute;tailles</strong>
+                                          <strong style="color:white">D&eacute;tails</strong>
                                       </div>
                                       <div class="clear"></div>
                                   </div>
@@ -193,7 +193,7 @@ $totalrejapp=$query->rowCount();
 
                                       </div>
                                       <div class="income-range visitor-cl">
-                                         <strong style="color:white">D&eacute;tailles</strong>
+                                         <strong style="color:white">D&eacute;tails</strong>
                                       </div>
                                       <div class="clear"></div>
                                   </div>
@@ -201,77 +201,6 @@ $totalrejapp=$query->rowCount();
                             </div>
                         </div>
                         
-                          <?php 
-$sql ="SELECT ID from tblcertificat ";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$allpps=$query->rowCount();
-?>  
-                          <div class="col-lg-4">
-                          <div class="income-dashone-total orders-monthly shadow-reset nt-mg-b-30">
-                               
-                               <div class="income-title">
-                                   <div class="main-income-head">
-                                       <h2>TOTAL:</h2>
-                                       <div class="main-income-phara">
-                                       <a href="certificats.php"><p>CERTIFICATS</p></a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <a  href="certificats.php" class="block text-center">
-                                  <div class="income-dashone-pro">
-                                      <div class="income-rate-total">
-                                          <div class="price-adminpro-rate">
-                                              <h3><span class="counter" style="color:white"><?php echo htmlentities($allpps);?></span></h3>
-                                          </div>
-
-                                      </div>
-                                      <div class="income-range">
-
-                                          <strong style="color:white">D&eacute;tailles</strong>
-                                      </div>
-                                      <div class="clear"></div>
-                                  </div>
-                               </a>
-                           </div>
-                       </div>
-
-                        
-
-<?php 
-$sql ="SELECT ID from tblagent where Status='Actif' ";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$totalusers=$query->rowCount();
-?>  <div class="col-lg-4">
-                            <div class="income-dashone-total orders-monthly shadow-reset nt-mg-b-30">
-                               
-                               <div class="income-title">
-                                   <div class="main-income-head">
-                                       <h2>Nombre de:</h2>
-                                       <div class="main-income-phara">
-                                       <a href="registered-users.php"><p>AGENTS OPERATIONNELS</p></a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <a href="registered-users.php" class="block text-center" >
-                                  <div class="income-dashone-pro">
-                                      <div class="income-rate-total">
-                                          <div class="price-adminpro-rate">
-                                              <h3><span class="counter" style="color:white"><?php echo htmlentities($totalusers);?></span></h3>
-                                          </div>
-                                   
-                                      </div>
-                                      <div class="income-range">
-                                         
-                                          <strong style="color:white">D&eacute;tailes</strong>
-                                      </div>
-                                      <div class="clear"></div>
-                                  </div>
-                               </a>
-                           </div>
                        </div>
                     </div>
                 </div>
