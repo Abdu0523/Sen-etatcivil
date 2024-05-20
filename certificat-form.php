@@ -166,12 +166,16 @@ if (isset($_POST['submit'])) {
                                       <div class="col-lg-12">
                                           <div class="all-form-element-inner">
                                           <section >
+                                            <div >
+      <h3 style="text-align: left; padding-bottom: 50px;" class="text-primary">Les champs marqués d'un <span class="text-danger">*</span> sont obligatoires.</h3>
+
+                                            </div>
                                               <form method="post">
                                                   
                                                   <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
-                                                              <label class="login2 pull-right pull-right-pro">Date de naissance</label>
+                                                              <label class="login2 pull-right pull-right-pro">Date de naissance <span class="text-danger">*</span></label>
                                                           </div>
                                                           <div class="col-lg-2">
                                                             <?php // Calcul de la date minimale (4 mois avant aujourd'hui)
@@ -185,7 +189,7 @@ if (isset($_POST['submit'])) {
                                                   <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3 col-md-9 col-sm-9 col-xs-9">
-                                                              <label class="login2 pull-right pull-right-pro"><span class="basic-ds-n">Sexe</span></label>
+                                                              <label class="login2 pull-right pull-right-pro">Sexe<span class="text-danger">*</span></label>
                                                           </div>
                                                           <div class="col-lg-9 col-md-3 col-sm-3 col-xs-3">
                                                               <div class="bt-df-checkbox">
@@ -200,7 +204,7 @@ if (isset($_POST['submit'])) {
                                                   <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
-                                                              <label class="login2 pull-right pull-right-pro">Prenom et Nom </label>
+                                                              <label class="login2 pull-right pull-right-pro">Prenom et Nom <span class="text-danger">*</span></label>
                                                           </div>
                                                           <div class="col-lg-9">
                                                               <input type="text" class="form-control" name="fname" value="" required="true" />
@@ -211,7 +215,7 @@ if (isset($_POST['submit'])) {
                                                   <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
-                                                              <label class="login2 pull-right pull-right-pro">Lieu de naissance</label>
+                                                              <label class="login2 pull-right pull-right-pro">Lieu de naissance <span class="text-danger">*</span></label>
                                                           </div>
                                                           <div class="col-lg-9">
                                                               <input type="text" class="form-control" required="true" value="" name="pob" />
@@ -222,7 +226,7 @@ if (isset($_POST['submit'])) {
                                                   <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
-                                                              <label class="login2 pull-right pull-right-pro">certificat D'acouchement</label>
+                                                              <label class="login2 pull-right pull-right-pro">certificat D'acouchement <span class="text-danger">*</span></label>
                                                           </div>
                                                           <div class="col-lg-9">
                                                               <input type="file" class="form-control" required="true" value="" name="cda" accept="image/png, image/jpeg,image/svg, .pdf" />
@@ -233,7 +237,7 @@ if (isset($_POST['submit'])) {
                                                       <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
-                                                              <label class="login2 pull-right pull-right-pro">Prenom et Nom de la Mère</label>
+                                                              <label class="login2 pull-right pull-right-pro">Prenom et Nom de la Mère <span class="text-danger">*</span></label>
                                                           </div>
                                                           <div class="col-lg-9">
                                                               <input type="text" class="form-control" required="true" value="" name="nameofmother" />
@@ -243,11 +247,11 @@ if (isset($_POST['submit'])) {
 
 
 
-<br>
+                                                        <br>
                                                   <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
-                                                              <label class="login2 pull-right pull-right-pro">Prenom et Nom du père</label>
+                                                              <label class="login2 pull-right pull-right-pro">Prenom et Nom du père <span class="text-danger">*</span></label>
                                                           </div>
                                                           <div class="col-lg-9">
                                                               <input type="text" class="form-control" required="true" value="" name="nameoffather" />
@@ -258,7 +262,7 @@ if (isset($_POST['submit'])) {
                                                   <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
-                                                              <label class="login2 pull-right pull-right-pro">CIN de la Mère</label>
+                                                              <label class="login2 pull-right pull-right-pro">CIN de la Mère <span class="text-danger">*</span></label>
                                                           </div>
                                                           <div class="col-lg-9">
                                                               <input type="text" class="form-control" name="padd" value="" required="true" ></input>
@@ -269,7 +273,7 @@ if (isset($_POST['submit'])) {
                                                    <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
-                                                              <label class="login2 pull-right pull-right-pro">CIN du Père</label>
+                                                              <label class="login2 pull-right pull-right-pro">CIN du Père <span class="text-danger">*</span></label>
                                                           </div>
                                                           <div class="col-lg-9">
                                                               <input type="text" class="form-control" name="postaladd" value="" required="true"></input>
@@ -280,7 +284,7 @@ if (isset($_POST['submit'])) {
                                                    <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
-                                                              <label class="login2 pull-right pull-right-pro">Contacte du Père  </label>
+                                                              <label class="login2 pull-right pull-right-pro">Contacte du Père <span class="text-danger">*</span> </label>
                                                           </div>
                                                           <div class="col-lg-9">
                                                              <input type="text" class="form-control" required="true" value="" name="mobnumber" maxlength="10" pattern="[0-9]+" />
@@ -291,14 +295,14 @@ if (isset($_POST['submit'])) {
                                                  <div class="form-group-inner">
                                                       <div class="row">
                                                           <div class="col-lg-3">
-                                                              <label class="login2 pull-right pull-right-pro">Adresse</label>
+                                                              <label class="login2 pull-right pull-right-pro">Adresse <span class="text-danger">*</span></label>
                                                           </div>
                                                           <div class="col-lg-9">
                                                               <input type="text" class="form-control" required="true" name="address" value="" />
                                                           </div>
                                                       </div>
                                                   </div>
-                                         <br>
+                                                         <br>
                                               
                                                   <div class="form-group-inner">
                                                       <div class="login-btn-inner">
