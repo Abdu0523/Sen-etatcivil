@@ -7,6 +7,8 @@ include('includes/dbconnection.php');
 if (strlen($_SESSION['obcsuid']==1)) {
   header('location:certificat-form.php');
   } else{
+  
+   
 ?>
 
   
@@ -82,20 +84,34 @@ if (strlen($_SESSION['obcsuid']==1)) {
 
      <h1 class="text-primary">Félicitation votre requete a bien ete enregistrée</h1>
       </div>  
+      <?php
+                               
+$sql="SELECT * from tblcertificat where Status is null ORDER BY id DESC LIMIT 1 ";
+
+$query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $row)
+{               ?>
       <div class="container" data-aos="fade-right">
         <p style="font-size:18px; color:green;">
-        Votre numero temporaire est :<span class="font-monospace text-black fw-bold fs-2">"12340<?php echo $ApplicationID ?>" </span>
+        Votre numero temporaire est :<span class="font-monospace text-black fw-bold fs-2">"<?php  echo htmlentities($row->ApplicationID);?>" </span>
       </p>
     </div>
+    <?php $cnt=$cnt+1;}} ?> 
     <div class="col-md-6 col-sm-12 mx-auto text-center">
-      <button class="btn btn-info text-light" type="submit" value="<?php echo $ApplicationID ?>">Mon etat de traitement</button>
+    <a href="etat-suivi.php?search=<?php echo htmlentities ($row->ID);?>" class="btn btn-info text-light">Mon etat de suivi</a>
     </div>
     </section><!-- End Inner Page -->
     <div class="container" >
       <div class="row ">
       <div class="col-md-6 col-sm-12 mx-auto text-center">
         <p style="font-size:18px;">
-          Vous pouvez maintenant consulter l'etat de votre demande ci dessus. Votre demande de soutien est maintenant disponible pour les agents compétents.
+          Vous pouvez maintenant consulter l'etat de votre demande en utilisant le <span class="text-primary">"numero temporaire"</span>  ci dessus.
         </p>
     </div>
     <!-- ======= Block  ======= -->
