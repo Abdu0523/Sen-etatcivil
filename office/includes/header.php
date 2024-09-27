@@ -1,12 +1,10 @@
-      <?php
+<?php
 session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
 if (strlen($_SESSION['obcsaid']==0)) {
   header('location:logout.php');
   } else{
-
-
 
   ?>
  <div class="content-inner-all">

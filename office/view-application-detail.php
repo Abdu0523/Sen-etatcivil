@@ -146,7 +146,7 @@ $query->bindParam(':vid',$vid,PDO::PARAM_STR);
 
 <tr align="center">
 <td colspan="4" style="font-size:20px;" class=" bread-blod text-black ">
- No. Certificat :   <?php  echo $row->ApplicationID;?></td></tr>
+ No. Certificat : <span class="text-danger">" <?php  echo $row->ApplicationID;?> "</span></td></tr>
           
   <tr align="center">
  <td colspan="4" style="font-size:20px;color:blue">
@@ -168,8 +168,14 @@ Déclarant
 <td colspan="4" style="font-size:20px;color:blue">
 Détails de declaration</td></tr>
  <tr>
-         <th scope>Date de declaration</th>
-    <td colspan="3"><?php  echo $row->Dateofapply;?></td>
+    <th scope>Date de declaration</th>
+    <td><?php  echo $row->Dateofapply;?></td>
+    <th scope>Certificat d'Accouchement</th>
+    <?php if( $row->Cda == true ){ ?>
+    <td><button type="button"> <?php echo $row->Cda?> </button></td>
+    <?php }else{ ?>
+      <td class=" text-danger"> Cda n'existe pas!</td>
+    <?php } ?>
  </tr>
  <tr>
     <th scope>Nom complet</th>
@@ -249,6 +255,7 @@ if($row->Status=="")
 
 
 <!-- ========================= Declaration penratale =========================== -->
+
 <?php  } else {?> 
 
 <?php
@@ -274,7 +281,7 @@ Certificat enregistré par déclaration Parentale
 
 <tr align="center">
 <td colspan="4" style="font-size:20px;" class=" bread-blod text-black ">
- No. Certificat :   <?php  echo $row->ApplicationID;?></td></tr>
+ No. Certificat :  <span class="text-danger"> " <?php  echo $row->ApplicationID;?> "</span></td></tr>
           
   
     
@@ -282,8 +289,14 @@ Certificat enregistré par déclaration Parentale
 <td colspan="4" style="font-size:20px;color:blue">
 Détails de declaration</td></tr>
  <tr>
-         <th scope>Date de declaration</th>
-    <td colspan="3"><?php  echo $row->Dateofapply;?></td>
+    <th scope>Date de declaration</th>
+    <td><?php  echo $row->Dateofapply;?></td>
+    <th scope>Certificat d'Accouchement</th>
+    <?php if( $row->Cda == true ){ ?>
+    <td><button type="button"> <?php echo $row->Cda?> </button></td>
+    <?php }else{ ?>
+      <td class=" text-danger"> Cda n'existe pas!</td>
+    <?php } ?>
  </tr>
  <tr>
     <th scope>Nom complet</th>
@@ -345,10 +358,10 @@ if($row->Status=="")
      <th >Mention</th>
     <?php if($row->Status==""){ ?>
 
-                     <td class="text-danger" ><?php echo " Mention pas encore attribuée!"; ?></td>
-<?php } else { ?>                  <td><?php  echo htmlentities($row->Remark);?>
-                  </td>
-                  <?php } ?>
+    <td class="text-danger" ><?php echo " Mention pas encore attribuée!"; ?></td>
+<?php } else { ?>                  
+    <td><?php  echo htmlentities($row->Remark);?></td>
+  <?php } ?>
   </tr>
  
 <?php  if($row->Status=='Approuvé'): ?>
